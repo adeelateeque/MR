@@ -2,9 +2,9 @@
   <library name="com.nostra13.universalimageloader:universal-image-loader:1.9.1" type="repository">
     <properties maven-id="com.nostra13.universalimageloader:universal-image-loader:1.9.1" />
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/com/nostra13/universalimageloader/universal-image-loader/1.9.1/universal-image-loader-1.9.1.jar!/" />
-      <root url="jar://$MAVEN_REPOSITORY$/org/khronos/opengl-api/gl1.1-android-2.1_r1/opengl-api-gl1.1-android-2.1_r1.jar!/" />
-      <root url="jar://$MAVEN_REPOSITORY$/org/json/json/20080701/json-20080701.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/universal-image-loader-1.9.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/opengl-api-gl1.1-android-2.1_r1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/json-20080701.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
