@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.pusher:pusher-java-client:0.3.1" type="repository">
+    <properties maven-id="com.pusher:pusher-java-client:0.3.1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/pusher/pusher-java-client/0.3.1/pusher-java-client-0.3.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.2.2/gson-2.2.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
