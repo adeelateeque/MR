@@ -18,7 +18,6 @@ public class MeetRoulette extends Activity {
         // Retrieve the map and initial extent from XML layout
         mMapView = (MapView)findViewById(R.id.map);
         // Add dynamic layer to MapView
-        mMapView.addLayer(new ArcGISTiledMapServiceLayer("" +
-                "http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"));
+        mMapView.addLayer(new ArcGISTiledMapServiceLayer("" +"http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"));
     }
 }

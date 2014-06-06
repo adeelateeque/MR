@@ -8,7 +8,7 @@ import com.codurs.meetroulette.R;
 import com.esri.android.map.ags.ArcGISTiledMapServiceLayer;
 
 /**
- * Created by Adeel on 6/7/14.
+ * Created by Adeel on 6/7/14.dsdas
  */
 public class MapActivity extends Activity {
     MapView mMapView;

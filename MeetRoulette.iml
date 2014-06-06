@@ -17,20 +17,15 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="com.pusher:pusher-java-client:0.3.1" level="project" />
     <orderEntry type="module-library" exported="">
-      <library name="armeabi">
+      <library>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/.idea/libraries/armeabi" />
-          <root url="file://$MODULE_DIR$/.idea/libraries/armeabi-v7a" />
-          <root url="file://$MODULE_DIR$/.idea/libraries/x86" />
+          <root url="file://$MODULE_DIR$/libs" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/.idea/libraries/armeabi" recursive="false" />
-        <jarDirectory url="file://$MODULE_DIR$/.idea/libraries/armeabi-v7a" recursive="false" />
-        <jarDirectory url="file://$MODULE_DIR$/.idea/libraries/x86" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/libs" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="library" exported="" name="arcgis-android-api" level="project" />
   </component>
 </module>
 
