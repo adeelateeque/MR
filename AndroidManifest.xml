@@ -17,5 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MapActivity"/>
+        <activity android:name=".pusher.PusherService"/>
+
+        <service android:name=".com.codurs.meetroulette.pusher.PusherService"/>
     </application>
 </manifest>
