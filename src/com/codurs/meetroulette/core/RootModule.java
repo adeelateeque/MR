@@ -1,4 +1,4 @@
-package com.codurs.meetroulette;
+package com.codurs.meetroulette.core;
 
 import com.codurs.meetroulette.pusher.PusherService;
 

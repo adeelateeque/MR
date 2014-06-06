@@ -1,4 +1,4 @@
-package com.codurs.meetroulette;
+package com.codurs.meetroulette.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -22,7 +22,7 @@ public class MapActivity extends Activity {
         mMapView = (MapView)findViewById(R.id.map);
         // Add dynamic layer to MapView
         mMapView.addLayer(new ArcGISTiledMapServiceLayer("" +
-                "http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"));
+                "http://e1.onemap.sg/arcgis/rest/services/SM128/MapServer"));
 
     }
 

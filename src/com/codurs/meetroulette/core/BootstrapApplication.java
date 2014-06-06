@@ -1,4 +1,4 @@
-package com.codurs.meetroulette;
+package com.codurs.meetroulette.core;
 
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.FROYO;
@@ -22,7 +22,6 @@ import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
 
 import com.github.kevinsawicki.http.HttpRequest;
-import com.codurs.meetroulette.core.Constants;
 import com.codurs.meetroulette.core.Constants.Http;
 import com.codurs.meetroulette.pusher.BootReceiver.PushAlarm;
 import com.codurs.meetroulette.pusher.PusherService;

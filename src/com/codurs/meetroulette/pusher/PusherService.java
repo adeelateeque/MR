@@ -29,7 +29,7 @@ import android.os.Message;
 import android.support.v4.app.NotificationCompat;
 
 import com.google.gson.Gson;
-import com.codurs.meetroulette.BootstrapApplication;
+import com.codurs.meetroulette.core.BootstrapApplication;
 import com.codurs.meetroulette.R;
 import com.codurs.meetroulette.core.UserAgentProvider;
 import com.codurs.meetroulette.util.Ln;

@@ -1,11 +1,12 @@
-package com.codurs.meetroulette;
+package com.codurs.meetroulette.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
+import com.codurs.meetroulette.R;
 import com.esri.android.map.MapView;
 import com.esri.android.map.ags.ArcGISTiledMapServiceLayer;
 
-public class MeetRoulette extends Activity {
+public class MainActivity extends Activity {
     MapView mMapView;
     /**
      * Called when the activity is first created.
@@ -18,6 +19,6 @@ public class MeetRoulette extends Activity {
         // Retrieve the map and initial extent from XML layout
         mMapView = (MapView)findViewById(R.id.map);
         // Add dynamic layer to MapView
-        mMapView.addLayer(new ArcGISTiledMapServiceLayer("" +"http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"));
+        mMapView.addLayer(new ArcGISTiledMapServiceLayer("" +"http://e1.onemap.sg/arcgis/rest/services/SM128/MapServer"));
     }
 }
