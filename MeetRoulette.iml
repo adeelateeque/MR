@@ -15,7 +15,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="com.pusher:pusher-java-client:0.3.1" level="project" />
+    <orderEntry type="library" exported="" name="com.pusher:pusher-java-client:0.3.1" level="project" />
+    <orderEntry type="library" exported="" name="armeabi" level="application" />
   </component>
 </module>
 
