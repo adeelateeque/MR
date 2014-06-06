@@ -435,7 +435,7 @@ public class PusherService extends Service
 
         NotificationCompat.Builder mNotifyBuilder = new NotificationCompat.Builder(context).setContentTitle(title)
                 .setContentText(message).setStyle(new NotificationCompat.BigTextStyle().bigText(message)).setWhen(when)
-                .setSmallIcon(R.drawable.ic_stat_ab_notification);
+                .setSmallIcon(R.drawable.ic_launcher);
 
         int notifyID = 1;
 
