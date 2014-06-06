@@ -4,4 +4,10 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent">
 
+    <com.esri.android.map.MapView
+            android:id="@+id/map"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            initExtent = "-1.3296373526814876E7 3930962.41823043 -1.2807176545789773E7 4201243.7502468005">
+    </com.esri.android.map.MapView>
 </FrameLayout>

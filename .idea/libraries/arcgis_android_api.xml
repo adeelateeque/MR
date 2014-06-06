@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="arcgis-android-api">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/arcgis-android-sdk-v10.2.3/libs/arcgis-android-api.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/arcgis-android-sdk-v10.2.3/libs/arcgis-android-app-toolkit.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/arcgis-android-sdk-v10.2.3/libs/jackson-core-lgpl-1.9.5.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/arcgis-android-sdk-v10.2.3/libs/jackson-mapper-lgpl-1.9.5.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/arcgis-android-sdk-v10.2.3/libs/jcifs-1.3.17.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
