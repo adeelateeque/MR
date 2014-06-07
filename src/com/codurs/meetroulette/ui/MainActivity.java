@@ -8,6 +8,8 @@ import com.esri.android.map.ags.ArcGISTiledMapServiceLayer;
 
 public class MainActivity extends Activity {
     MapView mMapView;
+
+
     /**
      * Called when the activity is first created.
      */

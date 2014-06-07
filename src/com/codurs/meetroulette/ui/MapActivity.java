@@ -5,17 +5,27 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.*;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.view.View;
 import com.codurs.meetroulette.core.BootstrapApplication;
 import com.codurs.meetroulette.pusher.PusherService;
+import com.esri.android.map.GraphicsLayer;
 import com.esri.android.map.MapView;
 import com.codurs.meetroulette.R;
 import com.codurs.meetroulette.pusher.PusherService;
 import com.codurs.meetroulette.pusher.PusherService.LocalBinder;
 import com.esri.android.map.ags.ArcGISTiledMapServiceLayer;
+import com.esri.core.geometry.MultiPath;
+import com.esri.core.geometry.Point;
+import com.esri.core.geometry.Polygon;
+import com.esri.core.map.Graphic;
+import com.esri.core.symbol.PictureMarkerSymbol;
+import com.esri.core.symbol.SimpleLineSymbol;
 import com.google.gson.Gson;
+
+import java.util.ArrayList;
 
 
 /**
@@ -26,7 +36,11 @@ public class MapActivity extends Activity {
     public static final String EVENT_MARKER_CLICKED = "client-marker-clicked-event";
 
     MapView mMapView;
-
+    Graphic graphic;
+    PictureMarkerSymbol symbol;
+    GraphicsLayer graphicsLayer;
+    
+    
     private MessageReceiver messageReceiver = new MessageReceiver();
     private IntentFilter messageFilter = new IntentFilter();
     private PusherService mPusherService;
@@ -117,6 +131,25 @@ public class MapActivity extends Activity {
                             com.esri.core.geometry.Point.class);
                     if (mMapView != null)
                     {
+                        MultiPath polyline;
+                        ArrayList mArrayList = new ArrayList<Point>();
+
+
+                        point = mMapView.toMapPoint(new Point(motionEvent.getX(), motionEvent.getY()));
+                        mArrayList.add(point);
+
+
+                        polyline = new Polygon();
+
+                        polyline.startPath(StaticObject.x[0], StaticObject.y[0]);
+
+                        for (int i = 1; i < mArrayList.size(); i++) {
+                            polyline.lineTo(StaticObject.x[i], StaticObject.y[i]);
+                        }
+
+                        Graphic graphic = new Graphic(polyline, new SimpleLineSymbol(Color.BLUE,4));
+
+                        graphicsLayer.addGraphic(graphic);
                     }
                 }
             }
