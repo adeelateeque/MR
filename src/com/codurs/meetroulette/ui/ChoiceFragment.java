@@ -13,16 +13,16 @@ import android.widget.Toast;
 import com.codurs.meetroulette.R;
 import com.esri.android.map.MapView;
 import com.esri.android.map.GraphicsLayer;
-import com.esri.core.geometry.Geometry;
-import com.esri.core.geometry.MultiPath;
-import com.esri.core.geometry.Point;
+import com.esri.core.geometry.*;
 import com.esri.android.map.ags.ArcGISTiledMapServiceLayer;
 import com.esri.android.map.ags.ArcGISLayerInfo;
-import com.esri.core.geometry.Polyline;
 import com.esri.core.map.Graphic;
 import com.esri.core.symbol.SimpleFillSymbol;
+import com.esri.core.symbol.SimpleLineSymbol;
 import com.esri.core.symbol.SimpleMarkerSymbol;
 import com.esri.core.symbol.PictureMarkerSymbol;
+
+import java.util.ArrayList;
 
 /**
  * Created by Adeel on 6/7/14.
@@ -40,6 +40,10 @@ public class ChoiceFragment extends Fragment {
         mMapView = (MapView) getView().findViewById(R.id.map);
         mMapView.addLayer(new ArcGISTiledMapServiceLayer("" + "http://e1.onemap.sg/arcgis/rest/services/SM128/MapServer"));
 
+
+
+
+
         graphicsLayer = new GraphicsLayer();
         //plots the user's points
         for(int i=0;i<StaticObject.x.length;i++)
@@ -55,40 +59,32 @@ public class ChoiceFragment extends Fragment {
 
             graphicsLayer.addGraphic(graphic);
         }
-        //calculate mid point
 
 
 
 
 
-
-        Point midpoint=null;
-        //draw line to mid point
-        Polyline line;
-        MultiPath path;
-
-        for(int i=0;i<StaticObject.x.length;i++)
-        {
-//            line= new Polyline();
-//
-//
-//
-//
-//            p.setX(StaticObject.x[i]);
-//            p.setY(StaticObject.y[i]);
-//
-//            Point[]path = new Point[1];
-//            path[0]=orgin;
-//            path[1]=midpoint;
-//
-//            line.addPath(path);
+        //drawing a polyline
+        MultiPath polyline;
+        ArrayList mArrayList = new ArrayList<Point>();
 
 
+        Point point = mMapView.toMapPoint(new Point(motionEvent.getX(), motionEvent.getY()));
+        mArrayList.add(point);
+
+
+        polyline = new Polygon();
+
+        polyline.startPath(StaticObject.x[0],StaticObject.y[0]);
+
+        for (int i = 1; i < mArrayList.size(); i++) {
+            polyline.lineTo(StaticObject.x[i],StaticObject.y[i]);
         }
 
+        Graphic graphic = new Graphic(polyline, new SimpleLineSymbol(Color.BLUE,4));
 
+        graphicsLayer.addGraphic(graphic);
 
-      //  mMapView.addLayer(graphicsLayer);
 
 
 
