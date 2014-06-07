@@ -26,6 +26,11 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>support</artifactId>
+            <version>v4</version>
+        </dependency>
+        <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>${gson.version}</version>
@@ -71,6 +76,17 @@
             <artifactId>pusher-java-client</artifactId>
             <version>0.3.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.esri</groupId>
+            <artifactId>android</artifactId>
+            <version>1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.esri</groupId>
+            <artifactId>app-toolkit</artifactId>
+            <version>1</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
