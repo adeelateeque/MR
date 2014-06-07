@@ -135,8 +135,8 @@ public class MapActivity extends Activity {
                         ArrayList mArrayList = new ArrayList<Point>();
 
 
-                        point = mMapView.toMapPoint(new Point(motionEvent.getX(), motionEvent.getY()));
-                        mArrayList.add(point);
+                        //point = mMapView.toMapPoint(new Point(motionEvent.getX(), motionEvent.getY()));
+                        //mArrayList.add(point);
 
 
                         polyline = new Polygon();

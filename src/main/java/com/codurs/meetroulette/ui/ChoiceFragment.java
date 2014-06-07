@@ -41,13 +41,9 @@ public class ChoiceFragment extends Fragment {
         mMapView.addLayer(new ArcGISTiledMapServiceLayer("" + "http://e1.onemap.sg/arcgis/rest/services/SM128/MapServer"));
 
 
-
-
-
         graphicsLayer = new GraphicsLayer();
         //plots the user's points
-        for(int i=0;i<StaticObject.x.length;i++)
-        {
+        for (int i = 0; i < StaticObject.x.length; i++) {
             Point point = new Point();
             point.setX(StaticObject.x[i]);
             point.setY(StaticObject.y[i]);
@@ -61,34 +57,26 @@ public class ChoiceFragment extends Fragment {
         }
 
 
-
-
-
         //drawing a polyline
         MultiPath polyline;
         ArrayList mArrayList = new ArrayList<Point>();
 
 
-        Point point = mMapView.toMapPoint(new Point(motionEvent.getX(), motionEvent.getY()));
-        mArrayList.add(point);
+        //Point point = mMapView.toMapPoint(new Point(motionEvent.getX(), motionEvent.getY()));
+        //mArrayList.add(point);
 
 
         polyline = new Polygon();
 
-        polyline.startPath(StaticObject.x[0],StaticObject.y[0]);
+        polyline.startPath(StaticObject.x[0], StaticObject.y[0]);
 
         for (int i = 1; i < mArrayList.size(); i++) {
-            polyline.lineTo(StaticObject.x[i],StaticObject.y[i]);
+            polyline.lineTo(StaticObject.x[i], StaticObject.y[i]);
         }
 
-        Graphic graphic = new Graphic(polyline, new SimpleLineSymbol(Color.BLUE,4));
+        Graphic graphic = new Graphic(polyline, new SimpleLineSymbol(Color.BLUE, 4));
 
         graphicsLayer.addGraphic(graphic);
-
-
-
-
-
 
 
         Button yesButton = (Button) getView().findViewById(R.id.yesButton);
@@ -116,36 +104,30 @@ public class ChoiceFragment extends Fragment {
     }
 
 
-
-
-
-
     private class BackgroundTask extends AsyncTask<Runnable, Integer, Long> {
 
         @Override
         protected void onPostExecute(Long result) {
 
-            super.onPostExecute(result);
+           /* super.onPostExecute(result);
             String[] static_result = new String[StaticObjects.getAddress_results().size()];
-            for(int i=0;i<StaticObjects.getAddress_results().size();i++)
-            {
-                static_result[i]=StaticObjects.getAddress_results().get(i).getAddress();
+            for (int i = 0; i < StaticObjects.getAddress_results().size(); i++) {
+                static_result[i] = StaticObjects.getAddress_results().get(i).getAddress();
             }
-            adapter = new ArrayAdapter<CharSequence>(getBaseContext(),android.R.layout.simple_list_item_1,static_result);
-            searchResult.setAdapter(adapter);
+            adapter = new ArrayAdapter<CharSequence>(getBaseContext(), android.R.layout.simple_list_item_1, static_result);
+            searchResult.setAdapter(adapter);*/
         }
 
         @Override
         protected void onPreExecute() {
-            Toast.makeText(getBaseContext(), "Searching..", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getBaseContext(), "Searching..", Toast.LENGTH_SHORT).show();
             super.onPreExecute();
         }
 
         @Override
         protected Long doInBackground(Runnable... task) {
 
-            for(int i=0; i<task.length;i++)
-            {
+            for (int i = 0; i < task.length; i++) {
                 task[i].run();
 
                 if (isCancelled()) break;
