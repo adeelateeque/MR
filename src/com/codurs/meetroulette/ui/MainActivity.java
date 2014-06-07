@@ -16,9 +16,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        // Retrieve the map and initial extent from XML layout
-        mMapView = (MapView)findViewById(R.id.map);
-        // Add dynamic layer to MapView
-        mMapView.addLayer(new ArcGISTiledMapServiceLayer("" +"http://e1.onemap.sg/arcgis/rest/services/SM128/MapServer"));
+
     }
 }

@@ -44,26 +44,9 @@ public class MapActivity extends Activity {
         mMapView.addLayer(new ArcGISTiledMapServiceLayer("" +
                 "http://e1.onemap.sg/arcgis/rest/services/SM128/MapServer"));
 
-        FragmentManager fragmentManager = getFragmentManager();
 
-        FragmentTransaction ft = fragmentManager.beginTransaction();
-        ft.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
-        ChoiceFragment f = new ChoiceFragment();
-        ft.replace(android.R.id.content,f);
-        ft.commit();
 
-        /*ft.add(f,"");
 
-        if (f.isHidden()) {
-            ft.show(f);
-            layout.setVisibility(View.VISIBLE);
-            b.setText("Hide");
-        } else {
-            ft.hide(f);
-            b.setText("Show");
-            layout.setVisibility(View.GONE);
-        }
-        ft.commit();*/
 
 
     }
