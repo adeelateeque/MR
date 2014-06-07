@@ -119,43 +119,4 @@ public class ChoiceFragment extends Fragment {
 
 
     }
-
-
-
-
-
-
-    private class BackgroundTask extends AsyncTask<Runnable, Integer, Long> {
-
-        @Override
-        protected void onPostExecute(Long result) {
-
-            super.onPostExecute(result);
-            String[] static_result = new String[StaticObjects.getAddress_results().size()];
-            for(int i=0;i<StaticObjects.getAddress_results().size();i++)
-            {
-                static_result[i]=StaticObjects.getAddress_results().get(i).getAddress();
-            }
-            adapter = new ArrayAdapter<CharSequence>(getBaseContext(),android.R.layout.simple_list_item_1,static_result);
-            searchResult.setAdapter(adapter);
-        }
-
-        @Override
-        protected void onPreExecute() {
-            Toast.makeText(getBaseContext(), "Searching..", Toast.LENGTH_SHORT).show();
-            super.onPreExecute();
-        }
-
-        @Override
-        protected Long doInBackground(Runnable... task) {
-
-            for(int i=0; i<task.length;i++)
-            {
-                task[i].run();
-
-                if (isCancelled()) break;
-            }
-            return null;
-        }
-    }
 }
