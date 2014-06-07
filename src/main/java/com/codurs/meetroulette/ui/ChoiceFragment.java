@@ -113,11 +113,6 @@ public class ChoiceFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_choice, container, false);
 
 
-
-
-
-
-
     }
 
 

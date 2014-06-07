@@ -176,6 +176,29 @@
                             </execution>
                         </executions>
                     </plugin>
+
+
+
+                    <plugin>
+                        <groupId>com.googlecode.addjars-maven-plugin</groupId>
+                        <artifactId>addjars-maven-plugin</artifactId>
+                        <version>1.0.5</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>add-jars</goal>
+                                </goals>
+                                <configuration>
+                                    <resources>
+                                        <resource>
+                                            <directory>${basedir}/lib</directory>
+                                        </resource>
+                                    </resources>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+
                 </plugins>
             </build>
         </profile>
@@ -184,7 +207,7 @@
     <repositories>
         <repository>
             <id>android_artifacts</id>
-            <url>file://${project.basedir}/artifacts</url>
+            <url>file://${basedir}/artifacts</url>
         </repository>
         <repository>
             <id>pusher-java-client-mvn-repo</id>
