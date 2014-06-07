@@ -1,9 +1,13 @@
 package com.codurs.meetroulette.ui;
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.*;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.view.View;
 import com.codurs.meetroulette.core.BootstrapApplication;
 import com.codurs.meetroulette.pusher.PusherService;
 import com.esri.android.map.MapView;
@@ -12,6 +16,7 @@ import com.codurs.meetroulette.pusher.PusherService;
 import com.codurs.meetroulette.pusher.PusherService.LocalBinder;
 import com.esri.android.map.ags.ArcGISTiledMapServiceLayer;
 import com.google.gson.Gson;
+
 
 /**
  * Created by Adeel on 6/7/14.dsdas
@@ -38,6 +43,28 @@ public class MapActivity extends Activity {
         // Add dynamic layer to MapView
         mMapView.addLayer(new ArcGISTiledMapServiceLayer("" +
                 "http://e1.onemap.sg/arcgis/rest/services/SM128/MapServer"));
+
+        FragmentManager fragmentManager = getFragmentManager();
+
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+        ft.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
+        ChoiceFragment f = new ChoiceFragment();
+        ft.replace(android.R.id.content,f);
+        ft.commit();
+
+        /*ft.add(f,"");
+
+        if (f.isHidden()) {
+            ft.show(f);
+            layout.setVisibility(View.VISIBLE);
+            b.setText("Hide");
+        } else {
+            ft.hide(f);
+            b.setText("Show");
+            layout.setVisibility(View.GONE);
+        }
+        ft.commit();*/
+
 
     }
 

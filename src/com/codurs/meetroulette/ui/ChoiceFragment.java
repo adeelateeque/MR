@@ -14,7 +14,7 @@ import com.esri.core.geometry.Geometry;
 import com.esri.core.geometry.MultiPath;
 import com.esri.core.geometry.Point;
 import com.esri.android.map.ags.ArcGISTiledMapServiceLayer;
-import com.esri.android.map.ags.
+import com.esri.android.map.ags.ArcGISLayerInfo;
 import com.esri.core.geometry.Polyline;
 import com.esri.core.map.Graphic;
 import com.esri.core.symbol.SimpleFillSymbol;
@@ -66,29 +66,27 @@ public class ChoiceFragment extends Fragment {
 
         for(int i=0;i<StaticObject.x.length;i++)
         {
-            line= new Polyline();
-
-
-
-
-            p.setX(StaticObject.x[i]);
-            p.setY(StaticObject.y[i]);
-
-            Point[]path = new Point[1];
-            path[0]=orgin;
-            path[1]=midpoint;
-
-            line.addPath(path);
+//            line= new Polyline();
+//
+//
+//
+//
+//            p.setX(StaticObject.x[i]);
+//            p.setY(StaticObject.y[i]);
+//
+//            Point[]path = new Point[1];
+//            path[0]=orgin;
+//            path[1]=midpoint;
+//
+//            line.addPath(path);
 
 
         }
 
 
 
-        mMapView.addLayer(graphicsLayer);
+      //  mMapView.addLayer(graphicsLayer);
 
-
-        return inflater.inflate(R.layout.fragment_choice, container, false);
 
 
 
@@ -112,6 +110,14 @@ public class ChoiceFragment extends Fragment {
 
             }
         });
+
+        return inflater.inflate(R.layout.fragment_choice, container, false);
+
+
+
+
+
+
 
     }
 }
